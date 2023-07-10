@@ -16,8 +16,19 @@ public class Cliente {
 		return apellido;
 	}
 	
-	public String toString() {
-		return  nombre + " " + apellido;
+		
+		public String toString() {
+			return "Cliente [nombre=" + nombre + ", apellido=" + apellido + "]";
+		}
+		
+		
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 
+	
+	
 }

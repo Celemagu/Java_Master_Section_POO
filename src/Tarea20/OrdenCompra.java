@@ -16,8 +16,8 @@ public class OrdenCompra {
 	private static int ultimoId;
 	
 	Producto [] productos;
-	SimpleDateFormat formato = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss a");
-	String fechaconFormato=formato.format(fecha);
+	//SimpleDateFormat formato = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss a");
+	//String fechaconFormato=formato.format(fecha);
 	
 	public OrdenCompra() { 
 		this.identificador= ++ultimoId;
@@ -82,8 +82,8 @@ public class OrdenCompra {
 		sb.append("\nIdentificador: " + this.identificador++);
 		sb.append("\nCliente: " + this.getCliente());
 		
-		sb.append("\nfecha: " + fechaconFormato);
-		if (getProductos()!= null) {
+		sb.append("\nfecha: " + fecha);
+		
 			int cont= 1;
 			for (Producto p: this.getProductos()) {
 				sb.append ( "\n"+cont+": " +p.getFabricante()+ ", " + p.getNombre()+", $ " + p.getPrecio());
@@ -97,7 +97,7 @@ public class OrdenCompra {
 			}
 			sb.append ( "\nGran total: " +suma);
 			
-			}
+			
 		
 		return sb.toString();
 	}
